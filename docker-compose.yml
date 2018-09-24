@@ -4,7 +4,7 @@ services:
     image: mysql:5.7
     container_name: homework
     ports:
-    - 3306:3306
+    - 3310:3306
     environment:
     - LANG=C.UTF-8
     - TERM=dumb
@@ -15,6 +15,6 @@ services:
     networks:
       main:
         aliases:
-        - homework
+        - hw
 networks:
   main:

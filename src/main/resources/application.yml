@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/grad_setup?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3310/grad_setup?useUnicode=true&characterEncoding=utf-8
     username: douqing
     password: 111111
     driver-class-name: com.mysql.jdbc.Driver
