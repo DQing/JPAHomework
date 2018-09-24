@@ -1,0 +1,20 @@
+version: '2'
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: homework
+    ports:
+    - 3306:3306
+    environment:
+    - LANG=C.UTF-8
+    - TERM=dumb
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_DATABASE=grad_setup
+    - MYSQL_PASSWORD=111111
+    - MYSQL_USER=douqing
+    networks:
+      main:
+        aliases:
+        - homework
+networks:
+  main:
