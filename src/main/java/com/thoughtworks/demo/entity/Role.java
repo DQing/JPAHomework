@@ -17,19 +17,18 @@ public class Role {
     private int id;
     private String code;
 
-    @OneToOne
-    private User user;
-
     @ManyToMany
     @JoinTable(
             name = "t_role_privilege",
-            joinColumns = {
-                    @JoinColumn(name = "role_code", referencedColumnName = "code")},
-            inverseJoinColumns = {
-                    @JoinColumn(name = "privilege_code", referencedColumnName = "code")}
+            inverseJoinColumns =
+                    @JoinColumn(name = "privilege_code", referencedColumnName = "code"),
+            joinColumns =
+                    @JoinColumn(name = "role_code", referencedColumnName = "code")
     )
     private List<Privilege> privileges;
 
+    @OneToOne
+    private User user;
 
     public Role() {
     }
