@@ -16,4 +16,15 @@ public class User {
     private int id;
     private String name;
     private String telephoneNumber;
+
+    @OneToOne
+    private Role role;
+
+    public User() {
+    }
+
+    public User(String name, String telephoneNumber) {
+        this.name = name;
+        this.telephoneNumber = telephoneNumber;
+    }
 }

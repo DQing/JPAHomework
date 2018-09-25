@@ -15,4 +15,12 @@ public class Privilege {
     private int id;
     private String code;
     private String name;
+
+    public Privilege() {
+    }
+
+    public Privilege(String code, String name) {
+        this.code = code;
+        this.name = name;
+    }
 }

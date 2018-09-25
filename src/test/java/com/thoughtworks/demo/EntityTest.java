@@ -8,13 +8,16 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.lang.annotation.Annotation;
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-public class EntityTest {
+class EntityTest {
 
     @Test
     void should_create_user() {
@@ -22,6 +25,7 @@ public class EntityTest {
         assertNotNull(user);
         assertEquals(0, user.getId());
         assertNull(user.getName());
+        assertNull(user.getRole());
     }
 
     @Test
@@ -29,7 +33,6 @@ public class EntityTest {
         Role role = new Role();
         assertNotNull(role);
         assertEquals(0,role.getId());
-        assertNull(role.getName());
     }
 
     @Test
