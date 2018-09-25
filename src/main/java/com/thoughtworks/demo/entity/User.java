@@ -1,27 +1,23 @@
 package com.thoughtworks.demo.entity;
 
-
 import javax.persistence.*;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Table;
 
 @Entity
 @Table(name = "t_user")
 public class User {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private long id;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private int id;
     private String name;
+    private String telephoneNumber;
 
     public User() {
     }
 
-    public User(long id, String name) {
-        this.id = id;
+    public User(String name, String telephoneNumber) {
         this.name = name;
+        this.telephoneNumber = telephoneNumber;
     }
 
     public long getId() {
@@ -30,5 +26,9 @@ public class User {
 
     public String getName() {
         return name;
+    }
+
+    public String getTelephoneNumber() {
+        return telephoneNumber;
     }
 }
