@@ -1,5 +1,6 @@
 package com.thoughtworks.demo;
 
+import com.thoughtworks.demo.entity.Address;
 import com.thoughtworks.demo.entity.Privilege;
 import com.thoughtworks.demo.entity.Role;
 import com.thoughtworks.demo.entity.User;
@@ -66,6 +67,13 @@ class EntityTest {
         Role role = new Role();
         assertNotNull(role);
         assertEquals(0,role.getId());
+    }
+
+    @Test
+    void should_create_address() {
+        Address address = new Address();
+        assertNotNull(address);
+        assertEquals(0, address.getId());
     }
 
     @Test
