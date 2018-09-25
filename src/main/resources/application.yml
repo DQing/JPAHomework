@@ -4,6 +4,8 @@ spring:
     username: douqing
     password: 111111
     driver-class-name: com.mysql.jdbc.Driver
+  flyway:
+    enabled: true
   jpa:
     hibernate:
       naming:
